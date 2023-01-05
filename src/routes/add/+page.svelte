@@ -1,11 +1,14 @@
 <script>
 	// @ts-nocheck
 
+	import { confetti } from '@neoconfetti/svelte';
 	import { fly } from 'svelte/transition';
 	import i from '$lib/images/register.svg';
 	import { ArrowRightIcon, LoaderIcon } from 'svelte-feather-icons';
 	import Navbar from '$lib/components/navbar.svelte';
 	import SuccessModal from './_components/successModal.svelte';
+	import Footer from '$lib/components/footer.svelte';
+	let isVisible = false;
 	let name, phone, loading, num, showModal;
 	num = 0;
 	loading = false;
@@ -29,6 +32,7 @@
 		data = await resp.json();
 		loading = false;
 		num = data[0].id;
+		isVisible = true;
 		showModal = !showModal;
 		name = '';
 		phone = '';
@@ -40,6 +44,11 @@
 
 <SuccessModal {num} {showModal} />
 <Navbar />
+{#if isVisible}
+	<div>
+		<div use:confetti />
+	</div>
+{/if}
 <section class=" pt-24 flex items-center w-screen h-screen justify-center" in:fly={{ y: 200 }}>
 	<div class="mx-auto w-full">
 		<div
@@ -151,3 +160,5 @@
 		</div>
 	</div>
 </section>
+
+<Footer />

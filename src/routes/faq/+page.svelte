@@ -1,4 +1,5 @@
 <script>
+	import Footer from '$lib/components/footer.svelte';
 	import Navbar from '$lib/components/navbar.svelte';
 </script>
 
@@ -7,64 +8,62 @@
 <section class="py-36 px-6">
 	<div class="max-w-prose prose mx-auto text-lg">
 		<h1 class=" text-3xl md:!text-5xl font-bold mb-12">FAQ</h1>
-		<ol class=" list-decimal">
-			<li>
-				<h3 class="font-bold capitalize text-primary">what is this website about?</h3>
+		<ol>
+			<li class="p-3 rounded-lg bg-slate-50 dark:!bg-gray-800 shadow-md my-5">
+				<h3 class="font-bold capitalize mb-2">what is this website about?</h3>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolore vitae dolor modi
-					exercitationem.
+					Whatsgrow is an automated contacts gains website created by <a
+						class="text-primary font-medium underline"
+						href="https://nji.vercel.app">XAN TV</a
+					>
+				</p>
+			</li>
+			<li class="p-3 rounded-lg bg-slate-50 dark:!bg-gray-800 shadow-md my-5">
+				<h3 class="font-bold capitalize mb-2">How do I gain contacts here?</h3>
+				<p>
+					Simply head on to the <a class="text-primary font-medium underline" href="/add"
+						>add contact page</a
+					>
+					and fill in your information, then come back on sunday and head on to the
+					<a class="text-primary font-medium underline" href="/download">download</a> page to download
+					the vcf file.
+				</p>
+			</li>
+			<li class="p-3 rounded-lg bg-slate-50 dark:!bg-gray-800 shadow-md my-5">
+				<h3 class="font-bold capitalize mb-2">How to install the VCF file?</h3>
+				<h4 class="font-medium capitalize">for android users</h4>
+				<p>
+					Simply tap the file and choose the location you want the file to be saved. If you have
+					just one location, you'll simply receive a message saying the file will be imported
+					shortly.
+				</p>
+				<h4 class="font-medium capitalize mt-4">for iphone users</h4>
+				<p>
+					<a href="https://wa.link/nap2au" class="text-primary font-medium underline">Click here</a>
+					to chat with the admin so they can send you a video explaining how to save the file
+				</p>
+			</li>
+
+			<li class="p-3 rounded-lg bg-slate-50 dark:!bg-gray-800 shadow-md my-5">
+				<h3 class="font-bold capitalize mb-2">How to get the file if i miss download deadline?</h3>
+				<p>
+					You can get the file in the official whatsapp group <a
+						class="text-primary font-medium underline"
+						href="/add">here</a
+					>
+					or in the official telegram group
+					<a class="text-primary font-medium underline" href="/add">here</a>
+				</p>
+			</li>
+			<li class="p-3 rounded-lg bg-slate-50 dark:!bg-gray-800 shadow-md my-5">
+				<h3 class="font-bold capitalize mb-2">How can i get permanent verification?</h3>
+				<p>
+					Click
+					<a class="text-primary font-medium underline" href="https://wa.link/1az6fb">here</a> to chat
+					with the admin about permanent verification.
 				</p>
 			</li>
 		</ol>
 	</div>
 </section>
-
-<div class="p-2 w-full  mt-8 text-center">
-	<a href="/" class="text-primary">whatsgrow22@gmail.com</a>
-	<p class="leading-normal my-5">
-		+237673226566
-		<!-- <br />Saint Cloud, MN 56301 -->
-	</p>
-	<span class="inline-flex">
-		<a href="/" class="">
-			<svg
-				fill="currentColor"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				class="w-5 h-5"
-				viewBox="0 0 24 24"
-			>
-				<path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-			</svg>
-		</a>
-		<a href="/" class="ml-4">
-			<svg
-				fill="currentColor"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				class="w-5 h-5"
-				viewBox="0 0 24 24"
-			>
-				<path
-					d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-				/>
-			</svg>
-		</a>
-		<a class="ml-4" href="/">
-			<svg
-				fill="none"
-				stroke="currentColor"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				class="w-5 h-5"
-				viewBox="0 0 24 24"
-			>
-				<rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-				<path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
-			</svg>
-		</a>
-	</span>
-</div>
+<Footer />

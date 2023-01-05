@@ -8,7 +8,10 @@
 	import { saveAs } from 'file-saver';
 	import { v4 as uuidv4 } from 'uuid';
 	import { onMount } from 'svelte';
+	import Footer from '$lib/components/footer.svelte';
+	import { confetti } from '@neoconfetti/svelte';
 	var f;
+	let isVisible = false;
 	async function getData() {
 		let resp = await fetch(`/api/getData/`, {
 			method: 'GET'
@@ -16,7 +19,7 @@
 		f = await resp.json();
 		$data = f ? f.data[0] : {};
 	}
-
+	c;
 	onMount(() => {
 		getData();
 	});
@@ -26,12 +29,18 @@
 		setTimeout(() => {
 			var blob = new Blob([$data.vcf_content], { type: 'text/plain;charset=utf-8' });
 			saveAs(blob, `vCard_0${uuidv4(10)}.vcf`);
+			isVisible = true;
 			message = 'downloaded';
 		}, 1500);
 	}
 </script>
 
 <Navbar />
+{#if isVisible}
+	<div>
+		<div use:confetti />
+	</div>
+{/if}
 <section class="lg:!pt-24  overflow-hidden">
 	<div class="container px-5 py-24 mx-auto">
 		<div class=" mx-auto flex flex-wrap">
@@ -67,8 +76,9 @@
 							>
 						</li>
 						<li class="list-item">
-							The admin's contact is found in this file and is stored as <b>whatsgrow@admin</b>
+							The admin's contact is found in this file and is stored as <b>admin@whatsgrow</b>
 						</li>
+						<li class="list-item">All contacts gained from this website are prefixed with '👑'</li>
 					</ol>
 				{/if}
 				<div class="flex mt-6 items-center pb-5 border-b-2 border-gray-300 mb-5" />
@@ -117,3 +127,5 @@
 		</div>
 	</div>
 </section>
+
+<Footer />

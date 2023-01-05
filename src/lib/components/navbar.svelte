@@ -36,7 +36,7 @@
 </script>
 
 <nav
-	class="bg-gray-50 dark:bg-gray-800 fixed w-full z-[60] px-2 sm:px-4 py-2.5 rounded-b-xl shadow-lg"
+	class="bg-slate-50 dark:!bg-gray-800 rounded-b-lg shadow-md fixed w-full z-[60] px-2 sm:px-4 py-2.5 "
 >
 	<div class=" flex flex-wrap justify-between items-center mx-auto relative">
 		<a href="/" class="flex items-end order-1">
