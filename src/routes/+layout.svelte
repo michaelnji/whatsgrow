@@ -16,7 +16,6 @@
 			method: 'GET'
 		});
 		f = await resp.json();
-		console.log(f);
 		$data = f ? f[0] : {};
 	}
 	onMount(() => {

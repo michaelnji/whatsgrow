@@ -49,10 +49,10 @@
 				<p>
 					You can get the file in the official whatsapp group <a
 						class="text-primary font-medium underline"
-						href="/add">here</a
+						href="https://chat.whatsapp.com/L7KTuPu536t3AmrhY1gTBn">here</a
 					>
 					or in the official telegram group
-					<a class="text-primary font-medium underline" href="/add">here</a>
+					<a class="text-primary font-medium underline" href="https://t.me/whatsgrow">here</a>
 				</p>
 			</li>
 			<li class="p-3 rounded-lg bg-slate-50 dark:!bg-gray-800 shadow-md my-5">

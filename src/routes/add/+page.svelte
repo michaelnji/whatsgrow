@@ -9,17 +9,29 @@
 	import SuccessModal from './_components/successModal.svelte';
 	import Footer from '$lib/components/footer.svelte';
 	let isVisible = false;
-	let name, phone, loading, num, showModal;
-	num = 0;
+	let name, phone, loading, showModal;
+
 	loading = false;
 	showModal = false;
 	let err = false;
 	name = '';
 	phone = '';
+	let title, message;
 	async function signupUser() {
 		if (name.length <= 0 || phone.length <= 0) {
 			err = true;
 			return;
+		}
+		if (name === 'create') {
+			title = 'Created!';
+			message = 'VCF file created successfully and ready for download';
+		} else if (name === 'delete') {
+			title = 'Deleted!';
+			message = 'VCF file deleted successfully and ready for new batch ';
+		} else {
+			title = 'Congratulations!';
+			message =
+				'Your contact has being added to the file! come back on SUNDAY @7PM to download the VCF files. Visit the whatsapp group for more info';
 		}
 		err = false;
 		loading = true;
@@ -28,21 +40,22 @@
 			method: 'POST',
 			body: JSON.stringify({ name, phone })
 		});
-		console.log(resp);
+
 		data = await resp.json();
 		loading = false;
-		num = data[0].id;
 		isVisible = true;
-		showModal = !showModal;
+		showModal = true;
+		console.log(message);
+		console.log(title);
 		name = '';
 		phone = '';
 		setTimeout(() => {
-			showModal = !showModal;
-		}, 5000);
+			showModal = false;
+		}, 8000);
 	}
 </script>
 
-<SuccessModal {num} {showModal} />
+<SuccessModal {showModal} {title} {message} />
 <Navbar />
 {#if isVisible}
 	<div>

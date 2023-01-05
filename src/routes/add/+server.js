@@ -77,6 +77,11 @@ export async function POST(event) {
 			.eq('id', 4)
 			.select();
 		const { error } = await supabase.from('VERIFIED_USERS').delete().eq('isVIP', false);
+		const { data: users, error: errr } = await supabase.from('VERIFIED_USERS').select();
+		const { data: final_total_users, er } = await supabase
+			.from('Anonymous')
+			.update({ total_users: users.length })
+			.eq('id', 4);
 
 		if (error || error2) return error || error2;
 
@@ -88,15 +93,18 @@ export async function POST(event) {
 			.insert({ name: params.name, phone: params.phone })
 			.select();
 
+		const { data: users, error: errr } = await supabase.from('VERIFIED_USERS').select();
+
+		const { data: final_total_users, er } = await supabase
+			.from('Anonymous')
+			.update({ total_users: users.length })
+			.eq('id', 4);
+
 		// if an error occurs, sends down error message
 		if (error) {
-			return {
-				status: 400,
-				body: {
-					error
-				}
-			};
+			return new Response(Object(error));
 		}
+
 		// if successful sends down a user object containing the new user's information
 		const finalData = JSON.stringify(data);
 		return new Response(Object(finalData));

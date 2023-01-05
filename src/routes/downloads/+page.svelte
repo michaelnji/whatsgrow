@@ -3,7 +3,7 @@
 
 	import i from '$lib/images/92.svg';
 	import Navbar from '$lib/components/navbar.svelte';
-	import { FileIcon, LoaderIcon } from 'svelte-feather-icons';
+	import { FileIcon, LoaderIcon, UsersIcon } from 'svelte-feather-icons';
 	import data from '$lib/store/data';
 	import { saveAs } from 'file-saver';
 	import { v4 as uuidv4 } from 'uuid';
@@ -17,9 +17,10 @@
 			method: 'GET'
 		});
 		f = await resp.json();
+
 		$data = f ? f.data[0] : {};
 	}
-	c;
+
 	onMount(() => {
 		getData();
 	});
@@ -36,11 +37,7 @@
 </script>
 
 <Navbar />
-{#if isVisible}
-	<div>
-		<div use:confetti />
-	</div>
-{/if}
+
 <section class="lg:!pt-24  overflow-hidden">
 	<div class="container px-5 py-24 mx-auto">
 		<div class=" mx-auto flex flex-wrap">
@@ -49,6 +46,11 @@
 			</div>
 			<div class="lg:!w-1/2 w-full lg:!pl-10  mt-6 lg:!mt-0 p-4">
 				<h1 class="text-5xl font-extrabold mb-6">Download vcf File</h1>
+				{#if isVisible}
+					<div>
+						<div use:confetti />
+					</div>
+				{/if}
 				{#if $data.vcf_content === null}
 					<h2 class="text-3xl font-bold mb-6 mt-8">
 						oops! the file is not yet available, please comeback on <b>sunday @7pm</b>
@@ -85,8 +87,8 @@
 				<div class="flex text-sm md:!text-md ">
 					<div class="">
 						<div class="flex space-x-3 ">
-							<FileIcon size="18" />
-							<span class="title-font font-medium ">j-134</span>
+							<UsersIcon size="18" />
+							<span class="title-font font-medium ">{$data.total_users} contacts</span>
 						</div>
 					</div>
 					{#if message === 'downloaded'}
