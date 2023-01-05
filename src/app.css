@@ -1,0 +1,52 @@
+
+@import '@fontsource/inter/variable.css';
+@import '@fontsource/fira-mono/400.css';
+@import '@fontsource/fira-mono/700.css';
+@import '@fontsource/fira-mono/500.css';
+
+/* tailwindcss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* * general styling for components */
+
+/* buttons */
+.btn {
+  @apply focus:outline-none focus:ring-gray-400 font-semibold rounded-md text-base px-5 py-2.5 text-center mr-2 mb-2 bg-gray-700 text-gray-50 transition-all active:scale-95  transform duration-300 capitalize cursor-pointer;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.btn.btn-primary {
+  @apply text-primary-content bg-primary  focus:ring-primary-light;
+}
+.btn.btn-secondary {
+  @apply text-secondary-content bg-secondary hover:bg-gradient-to-bl focus:ring-secondary focus:ring-opacity-50;
+}
+.btn.btn-success {
+  @apply text-green-900 bg-gradient-to-br from-green-400 to-teal-300 hover:bg-gradient-to-bl focus:ring-green-300;
+}
+.btn.btn-error {
+  @apply text-red-100 bg-red-500 hover:bg-gradient-to-bl focus:ring-red-300;
+}
+.btn.btn-danger {
+  @apply text-yellow-900 bg-orange-400 hover:bg-gradient-to-bl focus:ring-yellow-200;
+}
+
+.btn.btn-info {
+  @apply text-blue-700 bg-blue-400 hover:bg-gradient-to-bl focus:ring-blue-300;
+}
+.btn.btn-alt {
+  @apply !bg-opacity-10 hover:!bg-opacity-30 bg-gray-500  focus:ring-opacity-0 text-gray-500;
+}
+.btn.btn-sm {
+  @apply px-3 py-2 text-sm;
+}
+.btn.btn-lg {
+  @apply md:px-8 md:py-5 md:text-xl px-6 py-3.5;
+}
+.btn-icon {
+  @apply p-2.5 text-center inline-flex items-center mr-2;
+}
+.btn-disabled {
+  @apply !bg-opacity-60 !text-opacity-50 pointer-events-none;
+}
