@@ -173,14 +173,14 @@
 							>
 								Don't understand? click here!
 							</a>
+							<p class="mt-3 mb-24 font-medium text-center capitalize">
+								Make sure you are a member of the whatsgrow whatsapp group!!📢🧏‍♂️🔊 <a
+									class="text-primary font-medium underline"
+									href="https://chat.whatsapp.com/L7KTuPu536t3AmrhY1gTBn">join here</a
+								>
+							</p>
 						</div>
 					</div>
-					<p class="mt-3 mb-24 font-medium text-center capitalize">
-						Make sure you are a member of the whatsgrow whatsapp group!!📢🧏‍♂️🔊 <a
-							class="text-primary font-medium underline"
-							href="https://chat.whatsapp.com/L7KTuPu536t3AmrhY1gTBn">join here</a
-						>
-					</p>
 				</div>
 				<div class="order-first hidden w-full lg:block">
 					<img class="object-cover  bg-cover rounded-l-lg " src={i} alt="" />
