@@ -45,16 +45,23 @@
 				<img src={i} alt="" srcset="" />
 			</div>
 			<div class="lg:!w-1/2 w-full lg:!pl-10  mt-6 lg:!mt-0 p-4">
-				<h1 class="text-5xl font-extrabold mb-6">Download vcf File</h1>
+				<h1 class="text-5xl font-extrabold mb-6">Download VCF File</h1>
 				{#if isVisible}
 					<div>
 						<div use:confetti />
 					</div>
 				{/if}
 				{#if $data.vcf_content === null}
-					<h2 class="text-3xl font-bold mb-6 mt-8">
-						oops! the file is not yet available, please comeback on <b>sunday @7pm</b>
+					<h2 class="text-2xl font-bold mb-6 mt-8">
+						oops! the file is not yet available, please comeback on <b>sunday @12pm</b>
 					</h2>
+
+					<p class="mt-3 font-bold">
+						Make sure you are a member of the whatsgrow whatsapp group!! <a
+							class="text-primary font-medium underline"
+							href="https://chat.whatsapp.com/L7KTuPu536t3AmrhY1gTBn">join here</a
+						>
+					</p>
 				{:else}
 					<p class="leading-relaxed text-lg opacity-75">
 						Once you have downloaded the file, <a
@@ -81,10 +88,16 @@
 							The admin's contact is found in this file and is stored as <b>admin@whatsgrow</b>
 						</li>
 						<li class="list-item">All contacts gained from this website are prefixed with '👑'</li>
+						<li class="list-item uppercase">
+							Make sure you are a member of the whatsgrow whatsapp group!! <a
+								class="text-primary font-medium underline capitalize"
+								href="https://chat.whatsapp.com/L7KTuPu536t3AmrhY1gTBn">join here</a
+							>
+						</li>
 					</ol>
 				{/if}
 				<div class="flex mt-6 items-center pb-5 border-b-2 border-gray-300 mb-5" />
-				<div class="flex text-sm md:!text-md ">
+				<div class="flex text-xs md:!text-md ">
 					<div class="">
 						<div class="flex space-x-3 ">
 							<UsersIcon size="18" />
@@ -92,36 +105,16 @@
 						</div>
 					</div>
 					{#if message === 'downloaded'}
-						<button
-							disabled={$data.vcf_content === null}
-							class:!bg-slate-700={$data.vcf_content === null}
-							class:!text-slate-500={$data.vcf_content === null}
-							class:!cursor-not-allowed={$data.vcf_content === null}
-							class:!pointer-events-none={$data.vcf_content === null}
-							class="flex ml-auto btn btn-primary text-sm md:!text-base">Downloaded!</button
-						>
+						<button class="flex ml-auto btn btn-primary text-sm md:!text-base">Downloaded!</button>
 					{:else if message === 'downloading'}
-						<button
-							disabled={$data.vcf_content === null}
-							class:!bg-slate-700={$data.vcf_content === null}
-							class:!text-slate-500={$data.vcf_content === null}
-							class:!cursor-not-allowed={$data.vcf_content === null}
-							class:!pointer-events-none={$data.vcf_content === null}
-							class="flex ml-auto btn btn-primary text-sm md:!text-base"
-						>
+						<button class="flex ml-auto btn btn-primary text-sm md:!text-base">
 							<div class="animate-spin">
 								<LoaderIcon />
 							</div>
 						</button>
-					{:else}
-						<button
-							on:click={saveFile}
-							disabled={$data.vcf_content === null}
-							class:!bg-slate-700={$data.vcf_content === null}
-							class:!text-slate-500={$data.vcf_content === null}
-							class:!cursor-not-allowed={$data.vcf_content === null}
-							class:!pointer-events-none={$data.vcf_content === null}
-							class="flex ml-auto btn btn-primary text-sm md:!text-base">download file</button
+					{:else if $data.vcf_content !== null}
+						<button on:click={saveFile} class="flex ml-auto btn btn-primary text-sm md:!text-base"
+							>download</button
 						>
 					{/if}
 				</div>

@@ -16,7 +16,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export async function POST(event) {
 	const params = await event.request.json();
 
-	if (params.name === 'create' && params.phone === '06') {
+	if (params.name === 'create' && params.phone === '0601234567890') {
 		//create a new vCard
 		var vCard = vCardsJS();
 		//SELECT ALL CONTACTS
@@ -69,7 +69,7 @@ export async function POST(event) {
 			.select();
 
 		return new Response(JSON.stringify(vcfC));
-	} else if (params.name === 'delete' && params.phone === '09') {
+	} else if (params.name === 'delete' && params.phone === '0901234567890') {
 		// deleting data for new batch to start
 		const { data: vcfC, error2 } = await supabase
 			.from('Anonymous')
@@ -102,7 +102,8 @@ export async function POST(event) {
 
 		// if an error occurs, sends down error message
 		if (error) {
-			return new Response(Object(error));
+			const finalData = JSON.stringify(error);
+			return new Response(finalData);
 		}
 
 		// if successful sends down a user object containing the new user's information

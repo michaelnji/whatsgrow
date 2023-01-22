@@ -8,18 +8,28 @@
 	import Navbar from '$lib/components/navbar.svelte';
 	import SuccessModal from './_components/successModal.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import ErrorModal from './_components/errorModal.svelte';
 	let isVisible = false;
 	let name, phone, loading, showModal;
 
 	loading = false;
 	showModal = false;
+	let showModal2 = false;
 	let err = false;
 	name = '';
 	phone = '';
 	let title, message;
 	async function signupUser() {
-		if (name.length <= 0 || phone.length <= 0) {
+		if (phone === '06' || phone == '09') phone = phone + '01234567890';
+		if (name.length <= 0 || phone.length <= 12) {
+			title = 'info incorrect!';
+			message =
+				"Make sure you've added your name and make sure your contact has your country code e.g +237 for Cameroon";
+			showModal2 = true;
 			err = true;
+			setTimeout(() => {
+				if (showModal2) showModal2 = false;
+			}, 8000);
 			return;
 		}
 		if (name === 'create') {
@@ -42,20 +52,35 @@
 		});
 
 		data = await resp.json();
-		loading = false;
-		isVisible = true;
-		showModal = true;
-		console.log(message);
-		console.log(title);
-		name = '';
-		phone = '';
-		setTimeout(() => {
-			showModal = false;
-		}, 8000);
+		if (data.code === '23505') {
+			loading = false;
+			err = true;
+			title = 'Contact already exists!';
+			message =
+				'Your contact is already in our database. Just wait for when the file shall be shared';
+			showModal2 = true;
+
+			name = '';
+			phone = '';
+			setTimeout(() => {
+				if (showModal) showModal = false;
+			}, 8000);
+		} else {
+			loading = false;
+			isVisible = true;
+			showModal = true;
+
+			name = '';
+			phone = '';
+			setTimeout(() => {
+				if (showModal) showModal = false;
+			}, 8000);
+		}
 	}
 </script>
 
 <SuccessModal {showModal} {title} {message} />
+<ErrorModal showModal={showModal2} {title} {message} />
 <Navbar />
 {#if isVisible}
 	<div>
@@ -89,12 +114,8 @@
 					<div class="mt-6 space-y-2">
 						<div>
 							<label for="name" class="opacity-60 text-sm my-2" class:text-red-600={err}>
-								{#if err}
-									This cannot be empty
-								{:else}
-									name
-								{/if}</label
-							>
+								Name
+							</label>
 							<input
 								required
 								bind:value={name}
@@ -108,16 +129,12 @@
 						</div>
 						<div>
 							<label for="phone" class="opacity-70 text-sm my-2" class:text-red-600={err}>
-								{#if err}
-									This cannot be empty
-								{:else}
-									Phone Number
-								{/if}
+								Phone Number
 							</label>
 							<input
 								required
 								bind:value={phone}
-								type=" phone"
+								type="text"
 								name="phone"
 								id="phone"
 								class:border-red-600={err}
@@ -141,11 +158,6 @@
             </div> -->
 						<div class="flex  flex-col mt-12 lg:space-y-2">
 							<button
-								disabled={name === '' || phone === ''}
-								class:!bg-slate-700={name === '' || phone === ''}
-								class:!text-slate-500={name === '' || phone === ''}
-								class:!cursor-not-allowed={name === '' || phone === ''}
-								class:!pointer-events-none={name === '' || phone === ''}
 								on:click={signupUser}
 								type="submit"
 								class="flex mt-4 items-center justify-center w-full btn btn-primary btn-lg"
@@ -165,6 +177,12 @@
 							</a>
 						</div>
 					</div>
+					<p class="mt-3 font-medium text-center capitalize">
+						Make sure you are a member of the whatsgrow whatsapp group!! <a
+							class="text-primary font-medium underline"
+							href="https://chat.whatsapp.com/L7KTuPu536t3AmrhY1gTBn">join here</a
+						>
+					</p>
 				</div>
 				<div class="order-first hidden w-full lg:block">
 					<img class="object-cover  bg-cover rounded-l-lg " src={i} alt="" />
