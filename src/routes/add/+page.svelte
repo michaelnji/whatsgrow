@@ -34,14 +34,13 @@
 		}
 		if (name === 'create') {
 			title = 'Created!';
-			message = 'VCF file created successfully and ready for download';
+			message = 'VCF file created successfully and ready for download🎉🎈👌';
 		} else if (name === 'delete') {
 			title = 'Deleted!';
-			message = 'VCF file deleted successfully and ready for new batch ';
+			message = 'VCF file deleted successfully and ready for new batch 👌';
 		} else {
 			title = 'Congratulations!';
-			message =
-				'Your contact has being added to the file! come back on SUNDAY @7PM to download the VCF files. Visit the whatsapp group for more info';
+			message = `Dear ${name}, Your contact has being added to the file!🥰🥰🥰 come back on SUNDAY @7PM to download the VCF files. Visit the whatsapp group for more info🎉🎈👌`;
 		}
 		err = false;
 		loading = true;
@@ -55,9 +54,8 @@
 		if (data.code === '23505') {
 			loading = false;
 			err = true;
-			title = 'Contact already exists!';
-			message =
-				'Your contact is already in our database. Just wait for when the file shall be shared';
+			title = 'Contact already exists!⚠️⚠️';
+			message = `Dear ${name}, your contact is already in our database. Just wait for when the file shall be shared🥰🥰🥰`;
 			showModal2 = true;
 
 			name = '';
@@ -98,7 +96,7 @@
 			>
 				<div class="w-full px-6 py-3">
 					<div>
-						<div class="mt-3 text-left sm:mt-5">
+						<div class="mt-12 text-left ">
 							<div class="inline-flex w-full flex-col">
 								<h3 class="text-3xl font-bold leading-6 lg:!text-5xl">Add Contact</h3>
 							</div>
@@ -177,8 +175,8 @@
 							</a>
 						</div>
 					</div>
-					<p class="mt-3 font-medium text-center capitalize">
-						Make sure you are a member of the whatsgrow whatsapp group!! <a
+					<p class="mt-3 mb-24 font-medium text-center capitalize">
+						Make sure you are a member of the whatsgrow whatsapp group!!📢🧏‍♂️🔊 <a
 							class="text-primary font-medium underline"
 							href="https://chat.whatsapp.com/L7KTuPu536t3AmrhY1gTBn">join here</a
 						>
