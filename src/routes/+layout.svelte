@@ -16,7 +16,8 @@
 			method: 'GET'
 		});
 		f = await resp.json();
-		$data = f ? f[0] : {};
+		$data = f[0] ? f[0] : { vcf_content: '', total_files: 0, total_gained: 0 };
+		console.log(f);
 	}
 	onMount(() => {
 		getData();

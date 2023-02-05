@@ -99,6 +99,8 @@ function formatNum(num) {
   // return the new value as a string
   return final.join('');
 }
+
+// same as formatNum, but for currencies
 function formatNumCurrency(num, currency) {
   num = parseInt(num);
   return num.toLocaleString('en-US', {

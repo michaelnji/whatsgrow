@@ -22,7 +22,7 @@ export async function POST({ params }) {
 		var finalVcard = '';
 		data.forEach((e) => {
 			vCard.cellPhone = e.phone;
-			vCard.firstName = '👑' + e.name;
+			vCard.firstName = '🎱' + e.name + ' WG';
 			finalVcard = finalVcard + vCard.getFormattedString();
 		});
 

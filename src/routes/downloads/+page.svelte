@@ -17,7 +17,7 @@
 			method: 'GET'
 		});
 		f = await resp.json();
-
+		console.log(f.data[0]);
 		$data = f ? f.data[0] : {};
 	}
 

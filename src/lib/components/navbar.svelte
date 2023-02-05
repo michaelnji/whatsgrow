@@ -40,8 +40,10 @@
 >
 	<div class=" flex flex-wrap justify-between items-center mx-auto relative">
 		<a href="/" class="flex items-end order-1">
-			<img src={logo} class="h-12 w-12" alt="logo" />
-			<span class="self-end text-xl font-extrabold whitespace-nowrap">whatsgrow</span>
+			<img src={logo} class="h-10 w-10" alt="logo" />
+			<span class="self-end text-xl font-bold whitespace-nowrap"
+				>Whats<b class="font-extrabold text-primary">Grow</b></span
+			>
 		</a>
 		<button
 			on:click={() => (showNav = !showNav)}

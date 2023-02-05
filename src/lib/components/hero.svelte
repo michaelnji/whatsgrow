@@ -30,6 +30,9 @@
 			<div
 				class="flex flex-col items-center md:!items-start mt-12 md:mt-36 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0 mx-auto md:mx-0 lg:!mt-12"
 			>
+				<h2 class=" text-xs font-bold tracking-widest text-primary uppercase mb-1">
+					XAN TV PRESENTS
+				</h2>
 				<h1
 					class="mb-8 text-5xl font-extrabold leading-none tracking-tighter  md:!text-6xl lg:!text-7xl xl:text-8xl text-center md:!text-left max-w-xl  md:!max-w-full xl:!max-w-[90%] lg:capitalize"
 				>

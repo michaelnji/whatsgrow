@@ -100,7 +100,7 @@ export async function POST(event) {
 			.update({ total_users: users.length })
 			.eq('id', 4);
 
-		// if an error occurs, sends down error message
+		// if an error occurs, sends down the error as a response object
 		if (error) {
 			const finalData = JSON.stringify(error);
 			return new Response(finalData);

@@ -1,5 +1,4 @@
 import { writable } from 'svelte/store';
-// theme
-
+// data store for data coming from the getData() server action
 const data = writable({});
 export default data;

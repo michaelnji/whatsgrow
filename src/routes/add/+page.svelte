@@ -143,20 +143,7 @@
 								placeholder="e.g +237680001234"
 							/>
 						</div>
-						<!-- <div>
-              <label for="confirm phone" class="opacity-70 text-sm my-2"
-                >Confirm phone <span class="text-red-500 text-xs ml-6">{phone_rMsg}</span
-                ></label
-              >
-              <input
-                bind:value={phone_r}
-                type="text"
-                name="phone"
-                id="phone"
-                class="block w-full px-5 py-3 text-base placeholder-gray-600 transition duration-500 ease-in-out transform border border-transparent rounded-lg  bg-gray-200 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white dark:focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-300 dark:focus:ring-offset-gray-600"
-                placeholder="Re-enter your phone"
-              />
-            </div> -->
+
 						<div class="flex  flex-col mt-12 lg:space-y-2">
 							<button
 								on:click={signupUser}
