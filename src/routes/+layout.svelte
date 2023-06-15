@@ -1,5 +1,8 @@
 <script>
 	// @ts-nocheck
+	import '@fontsource/fira-mono';
+	import '@fontsource/fira-mono/700.css';
+	import '@fontsource/fira-mono/500.css';
 
 	import Spinner from '../lib/components/spinner.svelte';
 	// @ts-nocheck
@@ -27,7 +30,7 @@
 
 <div class={$theme}>
 	<div
-		class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 w-screen h-screen overflow-x-hidden "
+		class="bg-gray-100 !font-mono dark:bg-gray-900 text-gray-900 dark:text-gray-100 w-screen h-screen overflow-x-hidden "
 	>
 		<slot><!-- optional fallback --></slot>
 	</div>

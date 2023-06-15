@@ -91,7 +91,8 @@ export async function POST({ params }) {
 			return {
 				status: 400,
 				body: {
-					error
+					error,
+					message: 'An error occurred.'
 				}
 			};
 		}

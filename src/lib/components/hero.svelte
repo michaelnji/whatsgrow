@@ -1,6 +1,7 @@
 <script>
 	import heroImg from '$lib/images/hero/19.svg';
 	import Navbar from '$lib/components/navbar.svelte';
+	import d from '$lib/scripts/numberFunctions';
 </script>
 
 <Navbar />
@@ -39,10 +40,10 @@
 					Need more whatsapp views?
 				</h1>
 				<p
-					class="mb-8 text-lg lg:text-xl leading-relaxed  text-center md:!text-left max-w-md md:!max-w-full opacity-80"
+					class="mb-8 text-lg lg:text-xl leading-relaxed  text-center md:!text-left max-w-xl opacity-80"
 				>
-					Gain up to 1k+ contacts weekly automatically and gain massive visibility with our SMM
-					tools and services. Fast. Reliable. Efficient.
+					Gain up to 1k contacts weekly automatically and gain massive visibility with our SMM tools
+					and services. Fast. Reliable. Efficient.
 				</p>
 				<div class="mt-0 lg:mt-6 max-w-7xl sm:flex">
 					<a href="/add" class="btn btn-primary btn-lg"> Submit contact </a>

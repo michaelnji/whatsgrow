@@ -39,10 +39,12 @@
 	class="bg-slate-50 dark:!bg-gray-800 rounded-b-lg shadow-md fixed w-full z-[60] px-2 sm:px-4 py-2.5 "
 >
 	<div class=" flex flex-wrap justify-between items-center mx-auto relative">
-		<a href="/" class="flex items-end order-1">
-			<img src={logo} class="h-10 w-10" alt="logo" />
-			<span class="self-end text-xl font-bold whitespace-nowrap"
-				>Whats<b class="font-extrabold text-primary">Grow</b></span
+		<a href="/" class="flex items-center gap-x-3 order-1">
+			<!-- <LifeBuoyIcon class="text-primary" /> -->
+			<span class="self-end text-xl font-semibold whitespace-nowrap"
+				>Whats<b class="font-bold py-1 px-3 ml-2 rounded-lg bg-primary font-mono text-gray-50"
+					>Grow</b
+				></span
 			>
 		</a>
 		<button

@@ -168,7 +168,7 @@
 					<p class="mt-3  font-medium text-center capitalize">
 						Make sure you are a member of the whatsgrow whatsapp group!!📢🧏‍♂️🔊 <a
 							class="text-primary font-medium underline"
-							href="https://chat.whatsapp.com/L7KTuPu536t3AmrhY1gTBn">join here</a
+							href="https://chat.whatsapp.com/Lkjq4Gxl8kHlyyRAQJb8fR">join here</a
 						>
 					</p>
 				</div>
