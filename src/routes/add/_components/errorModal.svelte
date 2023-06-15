@@ -1,6 +1,10 @@
 <script>
 	// @ts-nocheck
 
+	import { AlertTriangleIcon } from 'svelte-feather-icons';
+
+	// @ts-nocheck
+
 	import { fade, scale } from 'svelte/transition';
 	export let showModal = false;
 	export let title, message;
@@ -15,12 +19,12 @@
 		transition:fade
 		tabindex="-1"
 		aria-hidden="true"
-		class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-screen md:inset-0 h-screen flex bg-slate-900 !bg-opacity-30   justify-center items-center"
+		class="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-screen md:inset-0 h-screen flex bg-slate-700 !bg-opacity-50   justify-center items-center"
 		on:click|self={toggleModal}
 	>
 		<!-- Modal content -->
 		<div
-			class="relative !w-full max-w-lg bg-white rounded-lg shadow dark:bg-gray-700 z-50"
+			class="relative !w-full max-w-lg bg-white rounded-xl shadow-xl dark:bg-gray-900 z-50"
 			in:scale
 		>
 			<button
@@ -40,15 +44,22 @@
 					/></svg
 				>
 			</button>
-			<div class="py-6 px-6 lg:px-8">
-				<h3 class="mb-4 text-xl font-medium  capitalize !text-red-500">
-					{title}
-				</h3>
-				<p class="mt-8 mb-12">
+			<div class="py-6 prose">
+				<div class="border-b  px-6 lg:px-8 ">
+					<h3 class="mb-4 text-xl font-bold  capitalize  flex items-center gap-x-4">
+						<div
+							class="p-2 rounded-full bg-red-200 text-red-600 bg-opacity-60 dark:bg-opacity-20 dark:text-red-200"
+						>
+							<AlertTriangleIcon />
+						</div>
+						{title}
+					</h3>
+				</div>
+				<p class="mt-8 mb-6  px-6 lg:px-8 ">
 					{message}
 				</p>
 
-				<button on:click={toggleModal} class="w-full btn !text-red-200 mt-12 !bg-red-800">
+				<button on:click={toggleModal} class=" btn !text-red-200 mt-2 mx-8 !bg-red-800">
 					Oh Okay!</button
 				>
 			</div>

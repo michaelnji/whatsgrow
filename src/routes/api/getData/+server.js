@@ -17,7 +17,7 @@ export const GET = async (params) => {
 	// if an error occurs, sends down error as a response object
 	if (error) {
 		const finalData = JSON.stringify({
-			data: [{ vcf_content: '', total_files: 0, total_gained: 0 }]
+			data: [{ vcf_content: null, total_files: 0, total_gained: 0 }]
 		});
 		return new Response(finalData);
 	}

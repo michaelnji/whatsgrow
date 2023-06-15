@@ -60,8 +60,8 @@
 				</p>
 				<h2 class=" text-3xl font-semibold mb-4 text-center lg:!text-left ">It's Automated</h2>
 				<p class="leading-relaxed text-center md:!text-left text-base mb-4 opacity-75">
-					Whatsgrow offers an automated way of growing whatsapp contacts that allow you to start
-					seeing results as fast as possible.
+					WGC offers an automated way of growing whatsapp contacts that allow you to start seeing
+					results as fast as possible.
 				</p>
 			</div>
 			<div class="p-8 rounded-2xl shadow-xl bg-gray-50 dark:!bg-gray-800">
@@ -112,8 +112,8 @@
 					Growing your audience simplified.
 				</h1>
 				<p class="mb-8 text-lg leading-relaxed lg:!text-left text-center opacity-70">
-					Whatsgrow offers a simplified way of gaining contacts & status views without all the
-					hassle of joining groups.
+					WGC offers a simplified way of gaining contacts & status views without all the hassle of
+					joining groups.
 				</p>
 				<div class="flex  flex-wrap md:!flex-nowrap w-full mt-2 gap-4 text-left">
 					<div

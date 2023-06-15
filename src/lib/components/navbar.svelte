@@ -42,8 +42,7 @@
 		<a href="/" class="flex items-center gap-x-3 order-1">
 			<!-- <LifeBuoyIcon class="text-primary" /> -->
 			<span class="self-end text-xl font-semibold whitespace-nowrap"
-				>Whats<b class="font-bold py-1 px-3 ml-2 rounded-lg bg-primary font-mono text-gray-50"
-					>Grow</b
+				><b class="font-bold py-1 px-3 ml-2 rounded-lg bg-indigo-100 font-mono text-primary">WGC</b
 				></span
 			>
 		</a>

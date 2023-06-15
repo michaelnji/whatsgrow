@@ -14,7 +14,7 @@
 					A small tool to turn your social accounts around.
 				</h1>
 				<p class="text-xl">
-					whatsgrow aims to help aspiring content creators and social media influencer grow their
+					WGC aims to help aspiring content creators and social media influencer grow their
 					visibility online. It allows you to boost your social media audience and reach using our
 					SMM(Social Media Marketing) tools.
 				</p>

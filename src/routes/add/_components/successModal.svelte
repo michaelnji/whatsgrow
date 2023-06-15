@@ -1,6 +1,17 @@
 <script>
 	// @ts-nocheck
 
+	import {
+		AlertCircleIcon,
+		AwardIcon,
+		FilePlusIcon,
+		StarIcon,
+		Trash2Icon,
+		UserPlusIcon
+	} from 'svelte-feather-icons';
+
+	// @ts-nocheck
+
 	import { fade, scale } from 'svelte/transition';
 	export let showModal = false;
 	export let title, message;
@@ -20,7 +31,7 @@
 	>
 		<!-- Modal content -->
 		<div
-			class="relative !w-full max-w-lg bg-white rounded-lg shadow dark:bg-gray-700 z-50"
+			class="relative !w-full max-w-lg bg-white rounded-lg shadow dark:bg-gray-700 z-50 pb-2"
 			in:scale
 		>
 			<button
@@ -40,31 +51,27 @@
 					/></svg
 				>
 			</button>
-			<div class="py-6 px-6 lg:px-8">
-				<h3
-					class="mb-4 text-xl font-medium  capitalize"
-					class:!text-green-500={title === 'Congratulations!'}
-					class:!text-orange-500={title === 'Deleted!'}
-					class:!text-primary={title === 'Created!'}
-				>
-					{title}
-				</h3>
-				<p class="mt-8 mb-12">
+			<div class="py-6">
+				<div class="border-b  px-6 lg:px-8 ">
+					<h3 class="mb-4 text-xl font-bold  capitalize  flex items-center gap-x-4">
+						<div
+							class="p-2 rounded-full bg-green-200 text-green-600 bg-opacity-60 dark:bg-opacity-20 dark:text-green-200"
+						>
+							{#if title == 'Deleted'}
+								<Trash2Icon />
+							{:else if title == 'Congratulations'}
+								<UserPlusIcon />
+							{:else}
+								<FilePlusIcon />
+							{/if}
+						</div>
+						{title}
+					</h3>
+				</div>
+				<p class="mt-8 mb-12  px-6 lg:px-8 ">
 					{message}
 				</p>
-
-				<a
-					href="/"
-					class="w-full btn  mt-12"
-					class:!text-green-800={title === 'Congratulations!'}
-					class:!text-orange-800={title === 'Deleted!'}
-					class:!text-indigo-700={title === 'Created!'}
-					class:!bg-green-200={title === 'Congratulations!'}
-					class:!bg-orange-200={title === 'Deleted!'}
-					class:!bg-indigo-200={title === 'Created!'}
-				>
-					OKAY Thanks!</a
-				>
+				<a href="/" class="w-full btn mx-7 text-green-800 bg-green-200"> Okay Thanks!</a>
 			</div>
 		</div>
 	</div>

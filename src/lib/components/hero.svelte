@@ -35,9 +35,12 @@
 					XAN TV PRESENTS
 				</h2>
 				<h1
-					class="mb-8 text-5xl font-extrabold leading-none tracking-tighter  md:!text-6xl lg:!text-7xl xl:text-8xl text-center md:!text-left max-w-xl  md:!max-w-full xl:!max-w-[90%] lg:capitalize"
+					class="mb-8 text-5xl font-extrabold lg:!leading-[6rem] tracking-tighter  md:!text-6xl lg:!text-7xl  text-center md:!text-left max-w-xl  md:!max-w-full capitalize"
 				>
-					Need more whatsapp views?
+					Need more <b
+						class="text-green-600 lg:py-2 lg:px-4 lg:rounded-lg lg:bg-green-100 dark:!bg-opacity-10 bg-opacity-50 dark:text-green-300"
+						>whatsApp</b
+					> views?
 				</h1>
 				<p
 					class="mb-8 text-lg lg:text-xl leading-relaxed  text-center md:!text-left max-w-xl opacity-80"

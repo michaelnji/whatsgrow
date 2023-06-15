@@ -4,7 +4,7 @@
 	import { confetti } from '@neoconfetti/svelte';
 	import { fly } from 'svelte/transition';
 	import i from '$lib/images/register.svg';
-	import { ArrowRightIcon, LoaderIcon } from 'svelte-feather-icons';
+	import { ArrowRightIcon, InfoIcon, LoaderIcon } from 'svelte-feather-icons';
 	import Navbar from '$lib/components/navbar.svelte';
 	import SuccessModal from './_components/successModal.svelte';
 	import Footer from '$lib/components/footer.svelte';
@@ -33,13 +33,13 @@
 			return;
 		}
 		if (name === 'create') {
-			title = 'Created!';
-			message = 'VCF file created successfully and ready for download🎉🎈👌';
+			title = 'Created File';
+			message = 'VCF File created successfully and ready for users to download🎉🎈👌';
 		} else if (name === 'delete') {
-			title = 'Deleted!';
+			title = 'Deleted';
 			message = 'VCF file deleted successfully and ready for new batch 👌';
 		} else {
-			title = 'Congratulations!';
+			title = 'Congratulations';
 			message = `Dear ${name}, Your contact has being added to the file!🥰🥰🥰 come back on SUNDAY @7PM to download the VCF files. Visit the whatsapp group for more info🎉🎈👌`;
 		}
 		err = false;
@@ -85,28 +85,29 @@
 		<div use:confetti />
 	</div>
 {/if}
-<section
-	class=" pt-12 flex items-center w-screen min-h-screen justify-center mb-24"
-	in:fly={{ y: 200 }}
->
+<section class=" pt-12 flex items-center w-screen min-h-screen justify-center mb-24 ">
 	<div class="mx-auto w-full">
 		<div
-			class="justify-center text-left align-bottom transition-all transform max-h-screen rounded-lg sm:align-start sm:w-full overflow-hidden
+			class="justify-center text-left align-bottom transition-all transform  rounded-lg  sm:align-start sm:w-full overflow-hidden
       "
 		>
 			<div
-				class="grid flex-wrap items-center justify-center grid-cols-1 w-screen  lg:grid-cols-2 h-screen"
+				class="grid grid-cols-1 w-screen  lg:grid-cols-2  max-w-2xl lg:!max-w-6xl lg:gap-8 place-items-center mx-auto  lg:!mt-24 py-8"
 			>
-				<div class="w-full px-6 py-3">
+				<div class="w-full px-6 py-3 bg-white dark:bg-gray-800 sm:rounded-xl sm:shadow-xl">
 					<div>
 						<div class="mt-12 text-left ">
 							<div class="inline-flex w-full flex-col">
 								<h3 class="text-3xl font-bold leading-6 lg:!text-5xl">Add Contact</h3>
 							</div>
 							<div class="mt-4 text-base ">
-								<p>Submit your contact so it can be verified and added to the vcf file.</p>
-								<p class="font-bold">
-									When entering your phone number, enter the country code e.g (+237).
+								<p class="mb-8 opacity-75 text-sm">
+									Submit your contact so it can be verified and added to the vcf file.
+								</p>
+								<p class="font-bold opacity-75  mb-8">
+									When entering your phone number, enter the country code e.g <span
+										class="text-primar">(+237)</span
+									>
 								</p>
 							</div>
 						</div>
@@ -124,7 +125,7 @@
 								name="name"
 								id="name"
 								class:border-red-600={err}
-								class="block w-full px-5 py-3 text-base placeholder-gray-600 transition duration-500 ease-in-out transform border border-transparent rounded-lg  bg-gray-200 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white dark:focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-300 dark:focus:ring-offset-gray-600"
+								class="block w-full px-5 py-3 text-base placeholder-gray-500 transition duration-500 ease-in-out transform border border-transparent rounded-lg  bg-gray-200 dark:bg-gray-700 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white dark:focus:ring-gray-600 focus:ring-offset-2 focus:ring-offset-gray-300 dark:focus:ring-offset-gray-600"
 								placeholder="Enter your Name"
 							/>
 						</div>
@@ -139,7 +140,7 @@
 								name="phone"
 								id="phone"
 								class:border-red-600={err}
-								class="block w-full px-5 py-3 text-base placeholder-gray-600 transition duration-500 ease-in-out transform border border-transparent rounded-lg  bg-gray-200 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white dark:focus:ring-gray-700 focus:ring-offset-2 focus:ring-offset-gray-300 dark:focus:ring-offset-gray-600"
+								class="block w-full px-5 py-3 text-base placeholder-gray-500 transition duration-500 ease-in-out transform border border-transparent rounded-lg  bg-gray-200 dark:bg-gray-700 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white dark:focus:ring-gray-600 focus:ring-offset-2 focus:ring-offset-gray-300 dark:focus:ring-offset-gray-600"
 								placeholder="e.g +237680001234"
 							/>
 						</div>
@@ -165,14 +166,24 @@
 							</a>
 						</div>
 					</div>
-					<p class="mt-3  font-medium text-center capitalize">
-						Make sure you are a member of the whatsgrow whatsapp group!!📢🧏‍♂️🔊 <a
-							class="text-primary font-medium underline"
-							href="https://chat.whatsapp.com/Lkjq4Gxl8kHlyyRAQJb8fR">join here</a
+					<div
+						class=" font-medium mt-9 bg-gray-200 !bg-opacity-90 dark:bg-gray-900 p-4 rounded-lg opacity-75 flex items-center gap-x-3 dark:!bg-opacity-60"
+						in:fly={{ y: 200 }}
+					>
+						<div
+							class="p-2 rounded-full bg-primary-light text-primary bg-opacity-60 dark:bg-opacity-20 dark:text-primary-light"
 						>
-					</p>
+							<InfoIcon />
+						</div>
+						<p>
+							Make sure you are a member of the WGC WhatsApp group!!📢🧏‍♂️🔊 <a
+								class="text-primary font-medium underline"
+								href="https://chat.whatsapp.com/L7KTuPu536t3AmrhY1gTBn">join here</a
+							>
+						</p>
+					</div>
 				</div>
-				<div class="order-first hidden w-full lg:block">
+				<div class="order-first hidden lg:w-full lg:block">
 					<img class="object-cover  bg-cover rounded-l-lg " src={i} alt="" />
 				</div>
 			</div>

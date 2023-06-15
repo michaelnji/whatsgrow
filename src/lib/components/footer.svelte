@@ -5,15 +5,15 @@
 				<span class="w-10 h-10 text-white p-2 bg-primary rounded-full">
 					<b>WG</b>
 				</span>
-				<span class="ml-3 text-xl">WhatsGrow</span>
+				<span class="ml-3 text-xl">WGC</span>
 			</a>
 			<p class="text-sm opacity-60 sm:ml-6 sm:mt-0 mt-4">
-				© 2023 WhatsGrow —
+				© 2023 WGC —
 				<a
 					href="https://twitter.com/knyttneve"
 					rel="noopener noreferrer"
 					class="text-primary opacity-70 ml-1"
-					target="_blank">@whatsgroww</a
+					target="_blank">@WGCw</a
 				>
 			</p>
 			<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
