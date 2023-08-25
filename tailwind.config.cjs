@@ -4,7 +4,7 @@ const config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'mono': ['Fira Mono']
+				sans: ['Work Sans']
 			},
 			colors: {
 				primary: '#5941DC',

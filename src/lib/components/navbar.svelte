@@ -36,13 +36,13 @@
 </script>
 
 <nav
-	class="bg-slate-50 dark:!bg-gray-800 rounded-b-lg shadow-md fixed w-full z-[60] px-2 sm:px-4 py-2.5 "
+	class="bg-slate-50 dark:!bg-gray-800 border border-gray-200 dark:border-gray-400 fixed w-full z-[60] px-2 sm:px-4 py-2.5 "
 >
 	<div class=" flex flex-wrap justify-between items-center mx-auto relative">
-		<a href="/" class="flex items-center gap-x-3 order-1">
+		<a href="/" class="flex items-center order-1">
 			<!-- <LifeBuoyIcon class="text-primary" /> -->
 			<span class="self-end text-xl font-semibold whitespace-nowrap"
-				><b class="font-bold py-1 px-3 ml-2 rounded-lg bg-indigo-100 font-mono text-primary">WGC</b
+				><b class="font-bold py-1 px-3 ml-2 rounded-lg bg-indigo-100 f text-primary">WhatsGrow</b
 				></span
 			>
 		</a>

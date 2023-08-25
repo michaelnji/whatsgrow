@@ -24,7 +24,7 @@
 			method: 'GET'
 		});
 		f = await resp.json();
-		console.log(f.data[0]);
+
 		$data = f ? f.data[0] : {};
 	}
 
@@ -53,11 +53,7 @@
 			</div>
 			<div class="xl:!w-1/2 w-full px-4 lg:!pl-10  prose prose-sm mt-6 lg:!mt-0 p-4">
 				<h1 class="text-5xl font-extrabold mb-6">Download VCF File</h1>
-				{#if isVisible}
-					<div>
-						<div use:confetti />
-					</div>
-				{/if}
+
 				{#if $data.vcf_content === null}
 					<div class="px-6 py-4 rounded-xl shadow-lg bg-white dark:bg-gray-800 relative">
 						<div
@@ -135,6 +131,11 @@
 						</ol>
 					</div>
 				{/if}
+				{#if isVisible}
+					<div>
+						<div use:confetti />
+					</div>
+				{/if}
 				<div
 					class="flex mt-6 items-center pb-5 border-b-2 border-gray-300 dark:border-gray-700 mb-5"
 				/>
@@ -152,7 +153,7 @@
 					{#if message === 'downloaded'}
 						<button class="flex ml-auto btn btn-success text-sm md:!text-base">success!</button>
 					{:else if message === 'downloading'}
-						<button class="flex ml-auto btn btn-info text-sm md:!text-base text-info-light">
+						<button class="flex ml-auto btn btn-primary text-sm md:!text-base text-primary-light">
 							<div class="animate-spin">
 								<LoaderIcon />
 							</div>

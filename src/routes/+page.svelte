@@ -34,7 +34,7 @@
 			<!-- <h2 class=" text-xs font-bold tracking-widest text-primary uppercase mb-1">
        C
       </h2> -->
-			<h1 class="sm:text-5xl md:text-6xl text-4xl font-bold mb-4 capitalize">
+			<h1 class="sm:text-5xl md:text-6xl text-4xl font-medium mb-4 capitalize">
 				Groww your whatsapp status with ease
 			</h1>
 			<p class="lg:w-2/3 mx-auto leading-relaxed text-lg opacity-70">

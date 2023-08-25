@@ -85,28 +85,28 @@
 		<div use:confetti />
 	</div>
 {/if}
-<section class=" pt-12 flex items-center w-screen min-h-screen justify-center mb-24 ">
+<section class=" pt-12 flex items-center w-screen min-h-screen justify-center mb-24 mt-12">
 	<div class="mx-auto w-full">
 		<div
 			class="justify-center text-left align-bottom transition-all transform  rounded-lg  sm:align-start sm:w-full overflow-hidden
       "
 		>
 			<div
-				class="grid grid-cols-1 w-screen  lg:grid-cols-2  max-w-2xl lg:!max-w-6xl lg:gap-8 place-items-center mx-auto  lg:!mt-24 py-8"
+				class="grid grid-cols-1 w-screen  lg:grid-cols-2  max-w-2xl lg:!max-w-6xl lg:gap-8 place-items-center mx-auto  py-8"
 			>
-				<div class="w-full px-6 py-3 bg-white dark:bg-gray-800 sm:rounded-xl sm:shadow-xl">
+				<div class="w-full px-8 py-7 bg-white dark:bg-gray-800 sm:rounded-xl sm:shadow-xl">
 					<div>
-						<div class="mt-12 text-left ">
+						<div class=" text-left ">
 							<div class="inline-flex w-full flex-col">
-								<h3 class="text-3xl font-bold leading-6 lg:!text-5xl">Add Contact</h3>
+								<h3 class="text-4xl font-medium leading-6 ">Add Contact</h3>
 							</div>
-							<div class="mt-4 text-base ">
-								<p class="mb-8 opacity-75 text-sm">
+							<div class="mt-2 text-base ">
+								<p class="mb-2 opacity-75">
 									Submit your contact so it can be verified and added to the vcf file.
 								</p>
-								<p class="font-bold opacity-75  mb-8">
+								<p class="font-medium opacity-90 text-sm  mb-8">
 									When entering your phone number, enter the country code e.g <span
-										class="text-primar">(+237)</span
+										class="text-primary">(+237)</span
 									>
 								</p>
 							</div>
@@ -160,7 +160,7 @@
 							<a
 								href="/faq"
 								type="button"
-								class="inline-flex justify-center py-4 btn btn-alt btn-lg w-full !bg-transparent"
+								class="inline-flex justify-center py-4 btn btn-alt  w-full !bg-transparent"
 							>
 								Don't understand? click here!
 							</a>
